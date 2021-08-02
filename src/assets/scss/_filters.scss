@@ -1,0 +1,37 @@
+@import "colors";
+
+.filter {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: scroll;
+}
+
+.group::-webkit-scrollbar {
+  display: none;
+}
+
+.sub-filter {
+  white-space: nowrap;
+  margin-right: 20px;
+  padding: 5px 7px;
+  background-color: #f7f4f4a6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.sub-filter > input {
+  background-color: $base_color;
+}
+
+.filter-label {
+  margin-left: 5px;
+}
