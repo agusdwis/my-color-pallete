@@ -24,7 +24,10 @@ const App: React.FC = () => {
 
     if (isColor(addColor)) {
       if (colors && addColor !== "") {
-        data = [...data, ...[{ hex: addColor, isDefault: false }]];
+        data = [
+          ...data,
+          ...[{ hex: addColor.toUpperCase(), isDefault: false }],
+        ];
       }
 
       localStorage.removeItem("color");
@@ -79,7 +82,7 @@ const App: React.FC = () => {
           <p className="title">Add New Color:</p>
 
           <input
-            onChange={(e) => setAddColor(e.target.value.toUpperCase())}
+            onChange={(e) => setAddColor(e.target.value)}
             placeholder="#FFFFFF"
             type="text"
             className="form-input"
