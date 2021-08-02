@@ -83,7 +83,7 @@ const App: React.FC = () => {
 
           <input
             onChange={(e) => setAddColor(e.target.value)}
-            placeholder="#FFFFFF"
+            placeholder="#FFFFFF/red"
             type="text"
             className="form-input"
             value={addColor}
